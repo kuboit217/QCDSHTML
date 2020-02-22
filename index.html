@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>QCDS IT</title>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <!-- MultiStep Form -->
+  <div class="container-fluid" id="grad1">
+    <div class="row justify-content-center mt-0">
+      <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+        <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+          <h2><strong>Bảng khảo sát QCDS IT</strong></h2>
+          <p>Điền thông tin theo mẫu bên dưới và bấm tiếp tục để hoàn thành</p>
+          <div class="row">
+            <div class="col-md-12 mx-0">
+              <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                  <li class="active" id="account"><strong>Thông tin</strong></li>
+                  <li id="personal"><strong>Đánh giá</strong></li>
+                  <li id="payment"><strong>Ý kiến</strong></li>
+                  <li id="confirm"><strong>Hoàn thành</strong></li>
+                </ul> <!-- fieldsets -->
+                <fieldset>
+                  <div class="form-card">
+                    <h2 class="fs-title">Thông tin người đánh giá</h2> 
+                    <br>
+                    <div class="row">
+                      <div class="col-3"> 
+                        <label class="pay"> Khối*</label> 
+                      </div>
+                      <div class="col-9"> 
+                        <select class="list-dt" id="month" name="expmonth">
+                          <option selected>Chọn khối làm việc</option>
+                          <option>IMG</option>
+                          <option>MED</option>
+                        </select> 
+                      </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                      <div class="col-3"> 
+                        <label class="pay"> Bộ phận*</label> 
+                      </div>
+                      <div class="col-9"> 
+                        <input type="text" name="uname" placeholder="Bộ Phận" /> 
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-3"> 
+                        <label class="pay"> Bạn là :*</label> 
+                      </div>
+                      <div class="col-9"> 
+                        <div class="radio-group">
+                         <label class="radio-inline"><input type="radio" name="optradio1" checked>Nhân viên</label>
+                         <label class="radio-inline"><input type="radio" name="optradio1">Công nhân</label>
+                         <br>
+                       </div> 
+                     </div>
+                   </div>
+                   <div class="row">
+                    <div class="col-3"> 
+                      <label class="pay"> Bạn làm OVNC được bao lâu :*</label> 
+                    </div>
+                    <div class="col-9"> 
+                      <div class="radio-group">
+                       <label class="radio-inline"><input type="radio" name="optradio" checked>1 năm</label>
+                       <label class="radio-inline"><input type="radio" name="optradio" checked>2 năm</label>
+                       <label class="radio-inline"><input type="radio" name="optradio" checked>3 năm</label>
+                       <label class="radio-inline"><input type="radio" name="optradio" checked>4 năm</label>
+                       <label class="radio-inline"><input type="radio" name="optradio" checked>Trên 5 năm</label>
+                       <br>
+                     </div> 
+                   </div>
+                 </div>
+               </div> 
+               <input type="button" name="next" class="next action-button" value="Tiếp tục" />
+             </fieldset>
+             <fieldset>
+              <div class="form-card">
+                <h2 class="fs-title">Personal Information</h2> 
+                <input type="text" name="fname" placeholder="First Name" /> 
+                <input type="text" name="lname" placeholder="Last Name" /> 
+                <input type="text" name="phno" placeholder="Contact No." /> 
+                <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+              </div> 
+              <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+              <input type="button" name="next" class="next action-button" value="Next Step" />
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <h2 class="fs-title">Ý kiến đánh giá</h2>                
+                <div class="form-group">
+                  <label for="comment">Ý kiến:</label>
+                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div> 
+              </div> 
+              <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+              <input type="button" name="make_payment" class="next action-button" value="Hoàn thành" />
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <h2 class="fs-title text-center">Hoàn thành !</h2> 
+                <br><br>
+                <div class="row justify-content-center">
+                  <div class="col-3"> 
+                    <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> 
+                  </div>
+                </div> 
+                <br><br>
+                <div class="row justify-content-center">
+                  <div class="col-7 text-center">
+                    <h5>Bạn đã hoàn thành khảo sát QCDS của nhóm IT! 
+                      <br>
+                      Cảm ơn bạn đã tham gia khảo sát!
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
