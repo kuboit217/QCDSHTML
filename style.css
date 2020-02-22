@@ -9,7 +9,14 @@ html {
 
 #grad1 {
     background-color: : #9C27B0;
-    background-image: linear-gradient(120deg, #FF4081, #81D4FA)
+    background-image: url('images/1_1_.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat 0 50%;
+    background-size: cover;
+}
 }
 
 #msform {
